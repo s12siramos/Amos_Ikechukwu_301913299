@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: miva-care-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-miva_care_clinic}
+      POSTGRES_USER: ${POSTGRES_USER:-clinic_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me-before-real-use}
+    ports:
+      - "5433:5432"
+    volumes:
+      - miva_care_postgres_data:/var/lib/postgresql/data
+      - ./portfolio-1-database-design/sql:/docker-entrypoint-initdb.d:ro
+
+volumes:
+  miva_care_postgres_data:
