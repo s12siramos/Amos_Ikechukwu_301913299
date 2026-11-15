@@ -14,7 +14,7 @@ The system was designed to support core clinic operations, including patient reg
 
 
 
-GitHub repository: https://github.com/s12siramos/miva-care-clinic-portfolio
+GitHub repository: https://github.com/s12siramos/Amos\_Ikechukwu\_301913299
 
 
 
