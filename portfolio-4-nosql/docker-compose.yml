@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: mongo:8
+    container_name: miva-care-mongodb
+    restart: unless-stopped
+    ports:
+      - "27018:27017"
+    volumes:
+      - miva_care_mongodb_data:/data/db
+
+volumes:
+  miva_care_mongodb_data:
